@@ -1,0 +1,27 @@
+Alphabet
+a. upper (A-Z) and lower case letters (a-z) of the English alphabet
+b. underline character '_'
+c. decimal digits (0-9)
+Lexic
+operators: + - * / < <= = >= > != ==
+separators: [ ] {} ( ) : ; space newline
+reserved words: char string int loop if end else elsif read write struct
+identifiers:
+	identifier = letter | letter {(letter | underscore)} {digit}
+	letter = "A" | "B" | ... | "Z" | "a" | "b" | ... | "z" 
+	underscore = "_"
+	digit = "0" | nonzero_digit 
+	nonzero_digit = "1" | ... | "9"
+constants:
+integers:
+	noconst = "+" no | "-" no | no | 0
+	no = nonzero_digit{digit}
+characters:
+	character = 'letter' | 'digit'
+strings:
+	constchar = "string"
+	string = char{string}
+	char = letter | digit | space | , | ? | ! | operator | separator | @ | # | $ | % | ^ | & |
+ 
+	
+	  

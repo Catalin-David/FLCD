@@ -1,0 +1,19 @@
+program = compoundstmt
+compoundstmt = simplestmt ";" | simplestmt ";" compoundstmt
+simplestmt = declarationstmt | ...
+
+declarationstmt = "val" type identifier
+type = simpledec | arraydec
+simpledec = "int" | "char" | "string"
+arraydec = simpledec "[" nr "]"
+
+assignstmt = identifier "=" expression
+expression = expression ("+" | "-") term | term
+term = term ("*" | "/") factor | factor
+factor = "(" expression ")" | identifier
+iostmt = ("read" | "write") "(" identifier ")"
+ifstmt = "if" condition simplestmt {"elsif" simplestmt} ["else" simplestmt] "end"
+loopstmt = "loop" condition stmt "end"
+
+condition = expression relation expression
+relation = "<" | "<=" | "==" | "!=" | ">=" | ">"
