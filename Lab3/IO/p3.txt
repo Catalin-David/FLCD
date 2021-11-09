@@ -1,0 +1,18 @@
+val int n=input();
+val int[100000] vector;
+val int i=0;
+loop(i<n)
+ val int x=input();
+ vector[i]=x;
+ i=i+1;
+end
+val int minimum=vector[0];
+i=1;
+loop(i<n)
+ if(vector[i]<minimum)
+ minimum=vector[i];
+ end
+ i=i+1;
+end
+write("Minimum number is: ");
+write(minimum);

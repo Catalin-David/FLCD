@@ -1,0 +1,17 @@
+val int a=input();
+val int divisor=2;
+val bool isPrime=true;
+if(a<2)
+ isPrime=false;
+end
+loop(divisor*divisor<=a)
+ if(a%divisor==0)
+ isPrime=false;
+ end
+ divisor=divisor+1;
+end
+if(isPrime==true)
+ write(‘Number is prime’);
+else
+ write(“Number is not prime);
+end

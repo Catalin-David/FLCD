@@ -1,0 +1,10 @@
+val int a=input();
+val int b=input();
+val int c=input();
+if(a<=b and a<=c)
+ write(a);
+elsif (b<=a and b<=c)
+ write(b);
+else
+ write(c);
+end
